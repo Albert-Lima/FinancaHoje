@@ -1,6 +1,7 @@
 const express = require("express")
 const handlebars = require("express-handlebars")
 const app = express()
+const path = require('path')
 
 //Config
     //Handlebars
@@ -9,7 +10,7 @@ const app = express()
 
 //Rota principal
 app.get("/", (req, res)=>{
-    res.render("index")
+    res.sendFile(path.join(__dirname, "public", "index.html"))
 })
 
 
