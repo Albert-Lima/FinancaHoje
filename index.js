@@ -7,6 +7,8 @@ const path = require('path')
     //Handlebars
     app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
     app.set("view engine", 'handlebars')
+    app.set('views', path.join(__dirname, 'views')); // Certifica-se de que as views estão no diretório correto
+
 
 //Rota principal
 app.get("/", (req, res)=>{
