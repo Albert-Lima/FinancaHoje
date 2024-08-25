@@ -4,6 +4,9 @@ const app = express()
 const path = require('path')
 
 //Config
+    //Static Files
+    app.use(express.static("public"))
+    
     //Handlebars
     app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
     app.set("view engine", 'handlebars')
@@ -17,7 +20,6 @@ app.get("/", (req, res)=>{
 app.get("/calculadora", (req, res)=>{
     res.render("calculadora")
 })
-
 
 
 const PORT =  8081 
