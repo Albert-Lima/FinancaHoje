@@ -10,10 +10,10 @@ const path = require('path')
 
 //Rota principal
 app.get("/", (req, res)=>{
-    res.sendFile(path.join(__dirname, "index.html"))
+    res.render("home")
 })
 app.get("/calculadora", (req, res)=>{
-    res.sendFile(path.join(__dirname, "calculadora.html"))
+    res.render("calculadora")
 })
 
 
