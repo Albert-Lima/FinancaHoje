@@ -18,11 +18,11 @@ app.get("/calculadora", (req, res)=>{
 
 
 
-const PORT = process.env.PORT || 8081 
+const PORT =  8081 
 app.listen(PORT, err => {
     if(err){
         console.log("houve um erro ao iniciar o servidor: "+err)
     }else{
-        console.log("servidor rodando na porta: "+ PORT)
+        console.log("servidor rodando na porta: 8081")
     }
 })
