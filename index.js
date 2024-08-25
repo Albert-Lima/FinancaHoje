@@ -5,8 +5,8 @@ const path = require('path')
 
 //Config
     //Static Files
-    app.use(express.static("public"))
-    
+    app.use(express.static(path.join(__dirname,"public" )))
+
     //Handlebars
     app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
     app.set("view engine", 'handlebars')
